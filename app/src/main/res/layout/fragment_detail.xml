@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        tools:context=".ui.MovieActivity">
+        />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/marker_progress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:indeterminate="true"
+                android:layout_below="@+id/trailer_button"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageView
+                android:id="@+id/iv_thump"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_movie_date"
+                android:layout_marginTop="8dp"
+                android:src="@android:drawable/btn_star_big_off" />
+
+            <TextView
+                android:id="@+id/tv_movie_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_movie_title"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_thump" />
+
+            <RatingBar
+                android:id="@+id/rb_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_description"
+                android:isIndicator="true"
+                android:numStars="5" />
+
+
+            <CheckBox
+                android:id="@+id/add_to_favorite_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rb_rate"
+                android:text="Add To Favorite" />
+
+            <Button
+                android:id="@+id/trailer_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_to_favorite_checkbox"
+                android:text="Show Trailers" />
+
+            <TextView
+                android:id="@+id/reviews_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trailer_button"
+                android:text="Reviews"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/reviews_texview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reviews_title_textview" />
+        </RelativeLayout>
+    </ScrollView>
+    <!--<ListView-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:id="@+id/reviews_listview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_below="@id/trailer_button" />-->
+</LinearLayout>
